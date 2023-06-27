@@ -1,17 +1,25 @@
 // array of objects (books) that should act as a storage?
 
-let books = [
-    {
-    "title": "",
-    "author": "",
-    "chapter": ""
-},
-{
-    "title": "",
-    "author": "",
-    "chapter": ""
-}
-];
+// let books = [
+//     {
+//     "title": "",
+//     "author": "",
+//     "chapter": ""
+// },
+// {
+//     "title": "",
+//     "author": "",
+//     "chapter": ""
+// }
+// ];
+
+let bookTemplate = {
+  title: "",
+  author: "",
+  chapter: ""
+};
+
+let books = [];
 
 let progressForm = document.getElementById("progress-form");
 
@@ -27,11 +35,16 @@ let currentChapter = document.getElementById("current-chapter").value;
 
   //create new book obj using the inputted details
 
-  const newBook = {
-  title: bookTitle,
-  author: bookAuthor,
-  chapter: currentChapter
-  }
+  // const newBook = {
+  // title: bookTitle,
+  // author: bookAuthor,
+  // chapter: currentChapter
+  // }
+
+  const newBook = Object.assign({}, bookTemplate); // Clone the book template
+  newBook.title = bookTitle;
+  newBook.author = bookAuthor;
+  newBook.chapter = currentChapter;
 
   //use books.push() to add new book obj to the books array
 
