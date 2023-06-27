@@ -1,4 +1,4 @@
-// array of objects (books) that should act as a storage (how do I get to actually save all the inputs?)
+// array of objects (books)
 
 let books = [];
 
