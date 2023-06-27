@@ -1,0 +1,111 @@
+/* Reset default styles */
+body, h1, h2, form, input, textarea, select, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Set a background color and center the content */
+  body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Set maximum width for the main content */
+  main {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Style the header */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Style the sections */
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the forms */
+  form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #88c0d0;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4299e1;
+  }
+  
+  /* Style the progress display and review log display */
+  #progress-display,
+  #review-log-display {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the dynamically populated progress and review items */
+  .progress-item,
+  .review-item {
+    margin-bottom: 10px;
+  }
+  
+  .progress-item span,
+  .review-item span {
+    font-weight: bold;
+  }
+  
+  /* Additional styling for specific elements */
+  #rating {
+    width: 100px;
+  }
+  
