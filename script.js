@@ -1,17 +1,4 @@
-// array of objects (books) that should act as a storage?
-
-// let books = [
-//     {
-//     "title": "",
-//     "author": "",
-//     "chapter": ""
-// },
-// {
-//     "title": "",
-//     "author": "",
-//     "chapter": ""
-// }
-// ];
+// array of objects (books) that should act as a storage (how do I get to actually save all the inputs?)
 
 let books = [];
 
@@ -21,7 +8,7 @@ progressForm.addEventListener("submit", submit);
 
 function submit(event) {
 
-event.preventDefault(); // prevent the form from submitting and refreshing the page; why do I need this?
+event.preventDefault(); // prevent the form from submitting and refreshing the page (why do I need this?)
 
 let bookTitle = document.getElementById("book-title").value;
 let bookAuthor = document.getElementById("book-author").value;
@@ -43,7 +30,31 @@ let currentChapter = document.getElementById("current-chapter").value;
 
   alert("The form was submitted");
   console.log(
-    "We are adding the " + bookTitle + " by " + bookAuthor + " to our database."
+    `We are adding the ${bookTitle} by ${bookAuthor} to our list.`
   );
 
+//clear the form inputs
+
+  progressForm.reset();
+
+  //display the inputted details below the form
+
+  displayBookProgress();
+
+};
+
+//chatgpt solution
+
+function displayBookProgress() {
+  let bookProgressList = document.getElementById("book-progress-list");
+
+  // Clear previous contents
+  bookProgressList.innerHTML = "";
+
+  // Loop through the books array and create list items for each book
+  books.forEach(function (book) {
+    let listItem = document.createElement("li");
+    listItem.textContent = `Title: ${book.title}, Author: ${book.author}, Chapter: ${book.chapter}`;
+    bookProgressList.appendChild(listItem);
+  });
 };
