@@ -1,4 +1,4 @@
-// create array of objects (books)
+// array of objects (books) that should act as a storage?
 
 let books = [
     {
@@ -17,26 +17,31 @@ let progressForm = document.getElementById("progress-form");
 
 progressForm.addEventListener("submit", submit);
 
-function submit() {
+function submit(event) {
 
-let bookTitle = document.getElementById("book-title");
-let bookAuthor = document.getElementById("book-author");
-let currentChapter = document.getElementById("current-chapter");
+event.preventDefault(); // prevent the form from submitting and refreshing the page
 
-  //use Object.create() to create new book obj using the inputted details
+let bookTitle = document.getElementById("book-title").value;
+let bookAuthor = document.getElementById("book-author").value;
+let currentChapter = document.getElementById("current-chapter").value;
 
-  const newBook = Object.create(books[0]);
-  newBook.title = bookTitle;
-  newBook.author = bookAuthor;
-  newBook.chapter = currentChapter;
+  //create new book obj using the inputted details
+
+  const newBook = {
+  title: bookTitle,
+  author: bookAuthor,
+  chapter: currentChapter
+  }
 
   //use books.push() to add new book obj to the books array
 
   books.push(newBook);
+
+  //just testing
 
   alert("The form was submitted");
   console.log(
     `We are adding the ${bookTitle.value} by ${bookAuthor.value} to our database.`
   );
 
-}
+};
