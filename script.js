@@ -23,11 +23,6 @@ let bookTitle = document.getElementById("book-title");
 let bookAuthor = document.getElementById("book-author");
 let currentChapter = document.getElementById("current-chapter");
 
-  alert("The form was submitted");
-  console.log(
-    `We are adding the ${bookTitle.value} by ${bookAuthor.value} to our database.`
-  );
-
   //use Object.create() to create new book obj using the inputted details
 
   const newBook = Object.create(books[0]);
@@ -38,5 +33,10 @@ let currentChapter = document.getElementById("current-chapter");
   //use books.push() to add new book obj to the books array
 
   books.push(newBook);
+
+  alert("The form was submitted");
+  console.log(
+    `We are adding the ${bookTitle.value} by ${bookAuthor.value} to our database.`
+  );
 
 }
