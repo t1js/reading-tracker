@@ -13,12 +13,6 @@
 // }
 // ];
 
-let bookTemplate = {
-  title: "",
-  author: "",
-  chapter: ""
-};
-
 let books = [];
 
 let progressForm = document.getElementById("progress-form");
@@ -27,7 +21,7 @@ progressForm.addEventListener("submit", submit);
 
 function submit(event) {
 
-event.preventDefault(); // prevent the form from submitting and refreshing the page
+event.preventDefault(); // prevent the form from submitting and refreshing the page; why do I need this?
 
 let bookTitle = document.getElementById("book-title").value;
 let bookAuthor = document.getElementById("book-author").value;
@@ -35,16 +29,11 @@ let currentChapter = document.getElementById("current-chapter").value;
 
   //create new book obj using the inputted details
 
-  // const newBook = {
-  // title: bookTitle,
-  // author: bookAuthor,
-  // chapter: currentChapter
-  // }
-
-  const newBook = Object.assign({}, bookTemplate); // Clone the book template
-  newBook.title = bookTitle;
-  newBook.author = bookAuthor;
-  newBook.chapter = currentChapter;
+  const newBook = {
+  title: bookTitle,
+  author: bookAuthor,
+  chapter: currentChapter
+  }
 
   //use books.push() to add new book obj to the books array
 
@@ -58,5 +47,3 @@ let currentChapter = document.getElementById("current-chapter").value;
   );
 
 };
-
-document.getElementById("progress").innerHTML = books.title + ", " + books.author + ", " + books.chapter;
