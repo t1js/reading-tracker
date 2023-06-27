@@ -41,7 +41,7 @@ let currentChapter = document.getElementById("current-chapter").value;
 
   alert("The form was submitted");
   console.log(
-    `We are adding the ${bookTitle.value} by ${bookAuthor.value} to our database.`
+    "We are adding the " + bookTitle + " by " + bookAuthor + " to our database."
   );
 
 };
