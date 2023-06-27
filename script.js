@@ -58,3 +58,5 @@ let currentChapter = document.getElementById("current-chapter").value;
   );
 
 };
+
+document.getElementById("progress").innerHTML = books.title + ", " + books.author + ", " + books.chapter;
