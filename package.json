@@ -18,6 +18,7 @@
   "dependencies": {
     "@cypress/webpack-dev-server": "^3.5.0",
     "D": "^1.0.0",
+    "webdriverio": "^8.11.2",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
   }
