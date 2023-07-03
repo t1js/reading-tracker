@@ -1,4 +1,4 @@
-import { remote } from 'webdriverio';
+const{ remote } = require('webdriverio');
 
 (async () => {
 	const browser = await remote({
