@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.16.0"
+    "cypress": "^12.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
